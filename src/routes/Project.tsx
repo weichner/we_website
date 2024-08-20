@@ -7,7 +7,10 @@ const Project = () => {
   return (
     <div>
       <Navbar />
-      <PresentationPartTwo />
+      <PresentationPartTwo
+        heading="PROJECTS"
+        headingText="Some of my most recent works."
+      />
       <Footer />
     </div>
   );
