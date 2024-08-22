@@ -9,40 +9,50 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 5rem;
+  flex-wrap: wrap;
 }
 
 .project-card {
   background: #1a1919;
   padding: 1.2rem 1.2rem;
-  width: 307px; /* Define a width for the card */
+  width: 307px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .project-card img {
   width: 100%;
+  height: auto;
 }
 
 .project-title {
   color: #fff;
   padding: 1rem 0;
-  text-align: center; /* Center the title */
+  text-align: center;
+  margin-bottom: auto;
 }
 
 .card-details p {
   padding-bottom: 1rem;
   font-size: 1.1rem;
   text-align: justify;
+  flex-grow: 1;
+  margin-bottom: auto;
 }
 
 .card-btns {
   display: flex;
   justify-content: center;
   gap: 40px;
-  padding: 0.5rem 0;
+  padding-top: 0.5rem;
 }
 
 .card-btns .btn {
   padding: 0.5rem 1rem;
-  color: black;
+  text-decoration: none;
+  text-align: center;
   cursor: pointer;
 }
 
