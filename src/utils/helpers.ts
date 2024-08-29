@@ -1,11 +1,15 @@
 import emailjs from 'emailjs-com';
 
-export const sendEmail = (formData: {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}) => {
+export const sendEmail = (
+  formData: {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+  },
+  onSuccess: (message: string) => void,
+  onError: (message: string) => void
+) => {
   emailjs
     .send(
       process.env.REACT_APP_EMAILJS_SERVICE_ID!,
@@ -16,11 +20,11 @@ export const sendEmail = (formData: {
     .then(
       (result) => {
         console.log(result.text);
-        alert('Message sent successfully!');
+        onSuccess('Message sent successfully!');
       },
       (error) => {
         console.log(error.text);
-        alert('Failed to send message, please try again later.');
+        onError('Failed to send message!');
       }
     );
 };
