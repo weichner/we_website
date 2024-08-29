@@ -32,7 +32,10 @@ const Navbar = () => {
           if (route === 'contact') {
             return (
               <li key={route}>
-                <a href="mailto:eichnerw2@gmail.com?subject=Contact&body=Hello,">
+                <a
+                  aria-label="Chat on WhatsApp"
+                  href="https://wa.me/351911053792"
+                >
                   {route}
                 </a>
               </li>
