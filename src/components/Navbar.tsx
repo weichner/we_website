@@ -29,12 +29,22 @@ const Navbar = () => {
       <Link to={'/'}>Portfolio</Link>
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         {listOfRoutes.map((route) => {
-          const path = route === 'home' ? '/' : `/${route}`;
-          return (
-            <li key={route}>
-              <Link to={path}>{route}</Link>
-            </li>
-          );
+          if (route === 'contact') {
+            return (
+              <li key={route}>
+                <a href="mailto:eichnerw2@gmail.com?subject=Contact&body=Hello,">
+                  {route}
+                </a>
+              </li>
+            );
+          } else {
+            const path = route === 'home' ? '/' : `/${route}`;
+            return (
+              <li key={route}>
+                <Link to={path}>{route}</Link>
+              </li>
+            );
+          }
         })}
       </ul>
       <div className="hamburger" onClick={handleClick}>

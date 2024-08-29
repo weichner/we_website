@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './FormStyles.css';
 import { sendEmail } from '../utils/helpers';
 import { validateEmail } from '../utils/helpers';
+import Modal from './Modal';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,15 @@ const Form = () => {
   const [error, setError] = useState({
     email: '',
   });
+  const [modalMessage, setModalMessage] = useState<string | null>('');
+
+  useEffect(() => {
+    if (modalMessage) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [modalMessage]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -47,7 +57,11 @@ const Form = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    sendEmail(formData);
+    sendEmail(
+      formData,
+      (message) => setModalMessage(message),
+      (message) => setModalMessage(message)
+    );
 
     setFormData({
       name: '',
@@ -55,6 +69,10 @@ const Form = () => {
       subject: '',
       message: '',
     });
+  };
+
+  const closeModal = () => {
+    setModalMessage(null);
   };
 
   return (
@@ -94,6 +112,7 @@ const Form = () => {
           onChange={handleChange}
         />
         <button className="btn">Submit</button>
+        {modalMessage && <Modal message={modalMessage} onClose={closeModal} />}
       </form>
     </div>
   );

@@ -16,9 +16,12 @@ const PresentationPart = () => {
           <Link to={'/project'} className="btn">
             Projects
           </Link>
-          <Link to={'/contact'} className="btn btn-light">
+          <a
+            href="mailto:eichnerw2@gmail.com?subject=Contact&body=Hello,"
+            className="btn btn-light"
+          >
             Contact
-          </Link>
+          </a>
         </div>
       </div>
     </div>
