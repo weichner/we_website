@@ -17,8 +17,8 @@ const ProjectCardData = [
   },
   {
     imgsrc: img1,
-    title: 'Synonim Finder',
-    text: 'Find synonims for a given word using React',
+    title: 'Synonyms Finder',
+    text: 'Find synonyms for a given word using React',
     source: 'https://github.com/weichner/react_challenge_synonyms',
   },
 ];
