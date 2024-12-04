@@ -10,7 +10,7 @@ const About = () => {
       <Navbar />
       <PresentationPartTwo
         heading="About"
-        headingText="I'm a Software Developer and Civil Engineer."
+        headingText="I'm a Software Developer."
       />
       <AboutContent />
       <Footer />
