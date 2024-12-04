@@ -17,9 +17,9 @@ const ProjectCardData = [
   },
   {
     imgsrc: img1,
-    title: 'Synonyms Finder',
-    text: 'Find synonyms for a given word using React',
-    source: 'https://github.com/weichner/react_challenge_synonyms',
+    title: 'NodeJS-React Fullstack app',
+    text: 'This pr a Full-Stack Application to manage and displaysecurities data. The application features a Node.js/TypeScript GraphQL API backed by a PostgreSQL database and a React frontend leveraging Material UI for design and Highcharts for data visualization',
+    source: 'https://github.com/weichner/fullstack',
   },
 ];
 

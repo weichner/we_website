@@ -34,12 +34,24 @@
   margin-bottom: auto;
 }
 
+.card-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .card-details p {
   padding-bottom: 1rem;
   font-size: 1.1rem;
   text-align: left;
   flex-grow: 1;
   margin-bottom: auto;
+  max-height: 250px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 12; /* Número de líneas a mostrar */
+  -webkit-box-orient: vertical;
 }
 
 .card-btns {

@@ -11,13 +11,14 @@ const PresentationPart = () => {
       </div>
       <div className="content">
         <p>Hi, I'm Werner Eichner</p>
-        <h1>Software Developer | Civil Engineer</h1>
+        <h1>Software Developer</h1>
         <div>
           <Link to={'/project'} className="btn">
             Projects
           </Link>
           <a
-            href="mailto:eichnerw2@gmail.com?subject=Contact&body=Hello,"
+            aria-label="Chat on WhatsApp"
+            href="https://wa.me/351911053792"
             className="btn btn-light"
           >
             Contact

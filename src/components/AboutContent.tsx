@@ -10,13 +10,17 @@ const AboutContent = () => {
       <div className="left">
         <h1>I'm Werner Eichner</h1>
         <p>
-          I'm a Software Developer and Civil Engineer. I have a passion for
-          coding and creating new things. I'm always looking for new challenges
-          and opportunities to grow as a developer.{' '}
+          I'm a Software Developer. I have a passion for coding and creating new
+          things. I'm always looking for new challenges and opportunities to
+          grow as a developer.{' '}
         </p>
-        <Link to={'/contact'}>
-          <button className="btn">Contact</button>
-        </Link>
+        <a
+          aria-label="Chat on WhatsApp"
+          href="https://wa.me/351911053792"
+          className="btn btn-light"
+        >
+          Contact
+        </a>
       </div>
       <div className="right">
         <div className="img-container">
